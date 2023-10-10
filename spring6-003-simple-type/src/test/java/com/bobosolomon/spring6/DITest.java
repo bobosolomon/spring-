@@ -1,5 +1,6 @@
 package com.bobosolomon.spring6;
 
+import com.bobosolomon.spring6.beans.A;
 import com.bobosolomon.spring6.beans.MyDataSource;
 import com.bobosolomon.spring6.beans.User;
 import org.junit.Test;
@@ -7,6 +8,12 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class DITest {
+    @Test
+    public void testAllSimpleType(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-all-simple-type.xml");
+        A a = applicationContext.getBean("a", A.class);
+        System.out.println(a);
+    }
 
     @Test
     public void testSimpleType(){

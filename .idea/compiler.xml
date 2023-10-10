@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring6-002-dependency-injection (1)" />
         <module name="spring6-001-first" />
         <module name="spring6-001-revelation" />
         <module name="spring6-002-dependency-injection (2)" />
