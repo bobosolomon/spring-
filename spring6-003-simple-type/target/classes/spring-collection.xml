@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="phone" class="com.bobosolomon.spring6.beans.People">
+    <bean id="people" class="com.bobosolomon.spring6.beans.People">
         <property name="names">
             <list>
                 <value>张三</value>
@@ -12,6 +12,18 @@
                 <value>刘二麻子</value>
                 <value>张三</value>
             </list>
+        </property>
+    </bean>
+
+    <bean id="addrs" class="com.bobosolomon.spring6.beans.People">
+        <property name="addrs">
+            <map>
+                <entry key="1" value="武汉"></entry>
+                <entry key="2" value="黄石"></entry>
+                <entry key="3" value="十堰"></entry>
+                <entry key="4" value="武学"></entry>
+
+            </map>
         </property>
     </bean>
 </beans>

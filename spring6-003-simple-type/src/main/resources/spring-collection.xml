@@ -14,4 +14,16 @@
             </list>
         </property>
     </bean>
+
+    <bean id="addrs" class="com.bobosolomon.spring6.beans.People">
+        <property name="addrs">
+            <map>
+                <entry key="1" value="武汉"></entry>
+                <entry key="2" value="黄石"></entry>
+                <entry key="3" value="十堰"></entry>
+                <entry key="4" value="武学"></entry>
+
+            </map>
+        </property>
+    </bean>
 </beans>
