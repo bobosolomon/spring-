@@ -4,14 +4,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="phone" class="com.bobosolomon.spring6.beans.People">
-        <property name="names">
-            <list>
-                <value>张三</value>
-                <value>李四</value>
-                <value>王五</value>
-                <value>刘二麻子</value>
-                <value>张三</value>
-            </list>
+        <property name="phones">
+            <set>
+                <value>110</value>
+                <value>110</value>
+                <value>110</value>
+                <value>120</value>
+                <value>110</value>
+                <value>120</value>
+                <value>119</value>
+            </set>
         </property>
     </bean>
 </beans>

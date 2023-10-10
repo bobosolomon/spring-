@@ -8,6 +8,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class DITest {
 
     @Test
+    public void testSet(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-set.xml");
+        People people = applicationContext.getBean("phone", People.class);
+        System.out.println(people);
+    }
+
+    @Test
     public void testList(){
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-collection.xml");
         People people = applicationContext.getBean("people", People.class);
