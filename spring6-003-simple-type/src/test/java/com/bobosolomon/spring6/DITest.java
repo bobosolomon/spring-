@@ -8,6 +8,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class DITest {
 
     @Test
+    public void testList(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-collection.xml");
+        People people = applicationContext.getBean("people", People.class);
+        System.out.println(people);
+    }
+
+    @Test
     public void testArray2(){
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-array-simple.xml");
         Order order = applicationContext.getBean("order", Order.class);
