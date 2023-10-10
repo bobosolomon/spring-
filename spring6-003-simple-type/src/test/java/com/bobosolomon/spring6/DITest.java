@@ -1,15 +1,25 @@
 package com.bobosolomon.spring6;
 
-import com.bobosolomon.spring6.beans.A;
-import com.bobosolomon.spring6.beans.MyDataSource;
-import com.bobosolomon.spring6.beans.Student;
-import com.bobosolomon.spring6.beans.User;
+import com.bobosolomon.spring6.beans.*;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class DITest {
 
+    @Test
+    public void testArray2(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-array-simple.xml");
+        Order order = applicationContext.getBean("order", Order.class);
+        System.out.println(order);
+    }
+
+    @Test
+    public void testArray(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-array-simple.xml");
+        Person person = applicationContext.getBean("person", Person.class);
+        System.out.println(person);
+    }
     @Test
     public void testCasecade(){
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-cascade.xml");

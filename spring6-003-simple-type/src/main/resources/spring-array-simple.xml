@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="person" class="com.bobosolomon.spring6.beans.Person">
+        <property name="fabariteFoods">
+            <array>
+                <value>鸡排</value>
+                <value>汉堡</value>
+                <value>可乐</value>
+            </array>
+        </property>
+    </bean>
+
+    <bean id="goods1" class="com.bobosolomon.spring6.beans.Goods">
+        <property name="name" value="西瓜"></property>
+    </bean>
+
+    <bean id="goods2" class="com.bobosolomon.spring6.beans.Goods">
+        <property name="name" value="苹果"></property>
+    </bean>
+
+    <bean id = "order" class="com.bobosolomon.spring6.beans.Order">
+        <property name="goods">
+            <array>
+                <ref bean="goods1"></ref>
+                <ref bean="goods2"></ref>
+            </array>
+        </property>
+    </bean>
+</beans>
