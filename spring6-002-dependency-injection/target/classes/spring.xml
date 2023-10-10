@@ -5,8 +5,17 @@
 
         <bean id="userDaoBean" class="com.bobosolomon.spring6.dao.UserDao"></bean>
 
-        <bean id="userServiceBean" class="com.bobosolomon.spring6.service.UserService">
-            <property name="userDao" ref="userDaoBean"></property>
+<!--        <bean id="userServiceBean" class="com.bobosolomon.spring6.service.UserService">-->
+<!--            <property name="userDao" ref="userDaoBean"></property>-->
+<!--        </bean>-->
+
+        <bean id="orderDaoBean" class="com.bobosolomon.spring6.dao.OrderDao"></bean>
+
+        <bean id="orderServiceBean" class="com.bobosolomon.spring6.service.OrderService">
+<!--            index="0"表示构造方法第一个参数， 将orderDaoBean对象传递给构造参数-->
+            <constructor-arg index="0" ref="userDaoBean"></constructor-arg>
+<!-- 第二个参数下标是1-->
+            <constructor-arg index="1" ref="orderDaoBean"></constructor-arg>
         </bean>
 </beans>
 
