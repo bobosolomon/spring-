@@ -2,12 +2,20 @@ package com.bobosolomon.spring6;
 
 import com.bobosolomon.spring6.beans.A;
 import com.bobosolomon.spring6.beans.MyDataSource;
+import com.bobosolomon.spring6.beans.Student;
 import com.bobosolomon.spring6.beans.User;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class DITest {
+
+    @Test
+    public void testCasecade(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-cascade.xml");
+        Student student = applicationContext.getBean("student", Student.class);
+        System.out.println(student);
+    }
     @Test
     public void testAllSimpleType(){
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-all-simple-type.xml");
