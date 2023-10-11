@@ -8,6 +8,8 @@
         <option value="$PROJECT_DIR$/spring6-01-first/pom.xml" />
         <option value="$PROJECT_DIR$/spring6-002-dependency-injection/pom.xml" />
         <option value="$PROJECT_DIR$/spring6-003-simple-type/pom.xml" />
+        <option value="$PROJECT_DIR$/annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-008-Ioc-Annotation/pom.xml" />
       </list>
     </option>
   </component>

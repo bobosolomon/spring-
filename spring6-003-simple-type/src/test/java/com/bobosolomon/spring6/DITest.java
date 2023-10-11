@@ -6,6 +6,12 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class DITest {
+    @Test
+    public void testProperties(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-properties.xml");
+        MyDataSource dataSource = applicationContext.getBean("dataSource", MyDataSource.class);
+        System.out.println(dataSource);
+    }
 
     @Test
     public void testMap(){
